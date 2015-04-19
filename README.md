@@ -7,3 +7,4 @@ spark-submit dsgd_mf.py #_of_factors #_of_workers #_of_iterations beta_value lam
 
 Using the given parameters, the program writes out to the given outputW_file and outputH_file
 
+If checking for convergence, uncomment the lines 105-113, if not checking for convergence, and want to run to completion, comment those lines.
