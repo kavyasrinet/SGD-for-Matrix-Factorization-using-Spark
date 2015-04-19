@@ -102,15 +102,15 @@ def main():
         #if the whole matrix has been covered (the input value of iteration)
         if (i+1)%num_workers == 0:
             #update and check for convergence
-            if prev_W_intersect - RDD_intersect_W <= 0.00001 and prev_H_intersect - RDD_intersect_H <= 0.00001:
-                print "W diff "+str(RDD_intersect_W - prev_W_intersect)
-                print "H diff "+str(RDD_intersect_H - prev_H_intersect)
-                print "converged"
-                break
-            prev_W_intersect = RDD_intersect_W
-            prev_H_intersect = RDD_intersect_H
-            print "W diff new "+str(prev_W_intersect)
-            print "H diff new "+str(prev_H_intersect)
+            #if prev_W_intersect - RDD_intersect_W <= 0.00001 and prev_H_intersect - RDD_intersect_H <= 0.00001:
+            #    print "W diff "+str(RDD_intersect_W - prev_W_intersect)
+            #    print "H diff "+str(RDD_intersect_H - prev_H_intersect)
+            #    print "converged"
+            #    break
+            #prev_W_intersect = RDD_intersect_W
+            #prev_H_intersect = RDD_intersect_H
+            #print "W diff new "+str(prev_W_intersect)
+            #print "H diff new "+str(prev_H_intersect)
             #record the loss for this iteration and reset accumulator to zero
             l_values.append(L_NZSL)
             L_NZSL = sc.accumulator(0)
